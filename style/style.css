@@ -27,8 +27,9 @@ body {
     padding: 0 50px;
 }
 
-.header__wrapper {
+.header__inner {
     display: flex;
+    flex-direction: column;
 }
 
 .header__top {
@@ -63,10 +64,10 @@ body {
 
 .header__content {
     max-width: 740px;
-    justify-self: end;
 }
 
 .header__title {
+    margin: 65vh 0 10vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -219,13 +220,14 @@ body {
         display: inline;
     }
     .header__content {
-        max-width: 525px;
+        max-width: 900px;
     }
     .header__title {
-        margin: 70vh 0 20vh;
         width: 100%;
     }
-
+    .footer__title, .footer__line {
+        display: none;
+    }
 
 
 }
@@ -239,7 +241,7 @@ body {
         margin: 0 20px;
     }
     .header__content {
-        max-width: 525px;
+        margin-left: 50px;
         font-size: 28px;
     } 
     .header__title {
@@ -272,9 +274,6 @@ body {
     .item-card__subtitle {
         max-width: 768px;
         font-size: 14px;
-    }
-    .footer__title, .footer__line {
-        display: none;
     }
     .footer__contacts {
         flex-wrap: wrap;
