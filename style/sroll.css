@@ -1,0 +1,64 @@
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter';
+}
+
+.products-slider {
+  margin: 196px 0;
+  padding: 34px 70px 51px;
+  background-color: #2A5A49;
+}
+
+
+.products__title {
+  font-family: 'Inter';
+  margin-bottom: 43px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 138.02%;
+  letter-spacing: 0.14em;   
+  color: #F5FFFD;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track{
+  display: flex;
+}
+
+.slider {
+  position: relative;
+  padding: 0 40px;
+}
+
+.slider__item {
+  margin: 0 15px;
+}
+
+.slick-arrow{
+  position: absolute;
+  top: 35%;
+  font-size: 0;
+  width: 22px;
+  height: 57px;
+  z-index: 10;
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+  background: url(../img/products/left-arrow.svg) 0 0 / 100% no-repeat;
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+  background: url(../img/products/right-arrow.svg) 0 0 / 100% no-repeat;
+}
