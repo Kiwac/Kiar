@@ -9,6 +9,47 @@ body {
   font-family: 'Inter';
 }
 
+.biog-slider {
+  margin: 196px 0;
+  padding: 34px 70px 51px;
+}
+
+.biog__title {
+  font-family: 'Inter';
+  margin-bottom: 43px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 138.02%;
+  letter-spacing: 0.14em;   
+  color: #434343;
+}
+
+.slider__content{
+  margin-right: 0;
+  font-family: 'Inter';
+  font-weight: 800;
+  max-width: 156px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 14px;
+  text-align: center;
+}
+
+.slider__picture  {
+  max-width: 156px;
+  max-height: 156px;
+}
+
+.slider__picture img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .products-slider {
   margin: 196px 0;
   padding: 34px 70px 51px;
@@ -41,7 +82,8 @@ body {
 }
 
 .slider__item {
-  margin: 0 15px;
+  display: flex;
+  justify-content:  center;
 }
 
 .slick-arrow{
@@ -53,12 +95,52 @@ body {
   z-index: 10;
 }
 
-.slick-arrow.slick-prev {
+.biog-slider  .slick-arrow.slick-prev {
+  left: 0;
+  background: url(../img/biog/left-green_arrow.svg) 0 0 / 100% no-repeat;
+}
+
+.biog-slider  .slick-arrow.slick-next {
+  right: 0;
+  background: url(../img/biog/right-green_arrow.svg) 0 0 / 100% no-repeat;
+}
+
+.products-slider .slick-arrow.slick-prev {
   left: 0;
   background: url(../img/products/left-arrow.svg) 0 0 / 100% no-repeat;
 }
 
-.slick-arrow.slick-next {
+.products-slider .slick-arrow.slick-next {
   right: 0;
   background: url(../img/products/right-arrow.svg) 0 0 / 100% no-repeat;
+}
+
+@media screen and (max-width:1160px) {
+  .biog-slider, .products-slider {
+  padding: 34px 30px 51px;
+  }
+  .slider {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width:855px) {
+  .biog-slider, .products-slider {
+  padding: 34px 40px 51px;
+  }
+  .slider {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .biog-slider, .products-slider {
+  padding: 34px 50px 51px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .biog-slider, .products-slider {
+  padding: 34px 10px 51px;
+  }
 }
