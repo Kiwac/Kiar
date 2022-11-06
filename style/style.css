@@ -16,10 +16,23 @@ body {
     font-family: 'Inter';
 }
 
-.header {
-    min-height: 100vh;
-    background-color: #2A5A49;
+.header__wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
 }
+
+.background {
+    position: relative;
+    background: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
 
 .container {
     max-width: 1220px;
@@ -27,12 +40,7 @@ body {
     padding: 0 50px;
 }
 
-.header__inner {
-    display: flex;
-    flex-direction: column;
-}
-
-.header__top {
+.header__inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -287,3 +295,4 @@ body {
         height: 15px;
     }
 }
+

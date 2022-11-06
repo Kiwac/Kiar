@@ -115,6 +115,47 @@ body {
   background: url(../img/products/right-arrow.svg) 0 0 / 100% no-repeat;
 }
 
+
+
+.background {
+  z-index: 2;
+  background: black;
+}
+
+.bg-slider, .bg-slider__item {
+  height: 100vh;
+}
+
+.bg-slider__item {
+  position: relative;
+}
+
+.bg-slider__item .bg-slider__image  {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.bg-slider__image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.46;
+}
+
+.bg-slider__title {
+  position: absolute;
+  max-width: 1160px;
+  top: 70%;
+  left: 12%;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 67px;
+  letter-spacing: 0.15em;
+  color: #F5FFFD;
+}
+
+
 @media screen and (max-width:1160px) {
   .biog-slider, .products-slider {
   padding: 34px 30px 51px;
@@ -137,10 +178,23 @@ body {
   .biog-slider, .products-slider {
   padding: 34px 50px 51px;
   }
+  .bg-slider__title {
+    top: 70%;
+    left: 15%;
+    right: 15%;
+    font-size: 28px;
+  }
 }
 
 @media screen and (max-width:400px) {
   .biog-slider, .products-slider {
   padding: 34px 10px 51px;
+  }
+  .bg-slider__title {
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    font-size: 28px;
+    text-align: center;
   }
 }

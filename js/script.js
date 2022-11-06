@@ -33,4 +33,13 @@ $(document).ready(function(){
       }
     ]
   });
+  $('.bg-slider').slick({
+    arrows: false,
+    slidesToShow: 1,
+    speed: 1000,
+    touchThreshold: 20,
+    waitForAnimate: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+  });
 });
