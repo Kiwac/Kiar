@@ -42,4 +42,29 @@ $(document).ready(function(){
     autoplay: true,
     autoplaySpeed: 4000,
   });
+  $('.submenu__burger').click(function(event){
+    $('.submenu__burger, .submenu-nav').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+});
+
+var header = $('.js-header'),
+  cloneHeader = header.clone();
+
+
+cloneHeader.addClass('header--fixed');
+header.before(cloneHeader);
+
+
+console.log(header);
+
+$(window).scroll(function() {
+  console.log($(window).scrollTop());
+
+  if($(window).scrollTop() > 725) {
+    cloneHeader.addClass('header--is-show');
+  }
+  else {
+    cloneHeader.removeClass('header--is-show');
+  }
 });

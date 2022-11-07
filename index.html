@@ -10,13 +10,13 @@
     <title>AID | ARCHITECTURE and INTERIOR DESIGN</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header js-header">
         <div class="header__wrapper">
             <div class="container">
                 <div class="header__inner">
-                    <div class="header__logo">
+                    <a href="#" class="header__logo">
                         <img src="img/logo/header-logo.svg" alt="">
-                    </div>
+                    </a>
 
                     <nav class="nav-1">
                         <a href="#" class="nav__link">Projects</a>
@@ -31,13 +31,32 @@
                         </div>
                         <a href="#" class="nav__link">Log in / Sing up</a>
                         <div class="submenu">
-                            <img src="img/logo/burger.svg" alt="">   
+                            <div class="submenu__burger">
+                                <span></span>
+                            </div>
+                            <nav class="submenu-nav">
+                                <a href="#" class="submenu-nav__link">Projects</a>
+                                <a href="#" class="submenu-nav__link">Biographies</a>
+                                <a href="#" class="submenu-nav__link">Products</a>
+                                <a href="#" class="submenu-nav__link">Folders</a>
+                                <a href="#" class="submenu-nav__link">Log in</a>
+                                <a href="#" class="submenu-nav__link">Sing up</a>
+                            </nav>   
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
+
+    <nav class="submenu-nav">
+        <a href="#" class="submenu-nav__link">Projects</a>
+        <a href="#" class="submenu-nav__link">Biographies</a>
+        <a href="#" class="submenu-nav__link">Products</a>
+        <a href="#" class="submenu-nav__link">Folders</a>
+        <a href="#" class="submenu-nav__link">Log in</a>
+        <a href="#" class="submenu-nav__link">Sing up</a>
+    </nav>  
 
     <div class="background">
         <div class="bg-slider">
@@ -341,7 +360,7 @@
                     </div>
                 </div>
                 <div class="info__btn">
-                    <a href="#" class="btn btn--outline">VIEW MORE</a>
+                    <a href="#" class="btn ">VIEW MORE</a>
                 </div>
             </div>    
         </div>
@@ -378,7 +397,8 @@
             </div>  
         </div>
     </footer>
-    
+
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
