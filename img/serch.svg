@@ -1,4 +1,4 @@
-<svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.3889 9.1C16.3889 13.3219 13.0316 16.7 8.94444 16.7C4.85727 16.7 1.5 13.3219 1.5 9.1C1.5 4.87815 4.85727 1.5 8.94444 1.5C13.0316 1.5 16.3889 4.87815 16.3889 9.1Z" stroke="#F5FFFD" stroke-width="3"/>
-<line x1="1.5" y1="-1.5" x2="11.8674" y2="-1.5" transform="matrix(0.700985 0.713176 -0.700985 0.713176 13.6296 16.4667)" stroke="#F5FFFD" stroke-width="3" stroke-linecap="round"/>
+<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="6.8512" cy="6.8512" r="6.1012" stroke="#F5FFFD" stroke-width="1.5"/>
+<line x1="11.026" y1="11.834" x2="16.1314" y2="16.9394" stroke="#F5FFFD" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
