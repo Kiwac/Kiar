@@ -9,7 +9,7 @@
 
 a {
     text-decoration: none;
-    color: white;
+    color: #F5FFFD;
 }
 
 body {
@@ -63,6 +63,7 @@ body {
 
 .nav-2 {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -111,11 +112,8 @@ body {
     column-gap: 50px;
 }
 
-.item-card__picture {
-    max-width: 545px;
-}
-
 .picture {
+    max-width: 545px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -151,7 +149,6 @@ body {
     line-height: 138.02%;
     text-align: justify;
     color: #434343;
-    word-wrap: break-word;
 }
 
 .item-card__additionally {
@@ -270,7 +267,7 @@ body {
         flex-flow: column;
 
     }
-    .item-card__picture {
+    .picture {
         max-width: 768px;
     }
     .item-card__content {
@@ -298,7 +295,7 @@ body {
     .footer__logo img, .header__logo img {
         height: 20px;
     }
-    .contact img, .submenu img{
+    .contact img, .serch img .submenu img{
         height: 15px;
     }
 }
