@@ -28,7 +28,7 @@ body {
 
 .header--fixed {
     position: fixed;
-    top: -100%;
+    top: -150%;
     width: 100%;
     z-index: 1000;
     background-color: #2A5A49;
@@ -44,7 +44,7 @@ body {
 }
 
 .header--is-show .header__inner{
-    padding: 25px 0;
+    padding: 34px 0 28px;
 }
 
 
@@ -328,7 +328,7 @@ body {
         overflow: auto;
     }
     .submenu-nav.active {
-        top: 0;
+        top: 5px;
     }
     .submenu-nav__link {
         display: flex;
