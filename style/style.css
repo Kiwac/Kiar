@@ -37,6 +37,7 @@ body {
 .header--is-show {
     position: fixed;
     top: 0;
+    z-index: 2000;
 }
 
 .header--is-show .header__wrapper{
@@ -44,7 +45,11 @@ body {
 }
 
 .header--is-show .header__inner{
-    padding: 34px 0 28px;
+    padding: 20px 0 15px;
+}
+
+.header--is-show .header__logo img{
+    height: 25px;
 }
 
 
@@ -270,6 +275,19 @@ body {
     body.lock {
         overflow: hidden;
     }
+    .header--is-show .header__inner{
+        padding: 20px 0 15px;
+    }
+    
+    .header--is-show .header__logo img{
+        height: 20px;
+    }
+
+    .header--is-show .submenu{
+        height: 20px;
+        z-index: 10;
+    }
+
     .nav-1, .nav__link {
         display: none;
     }
@@ -277,6 +295,11 @@ body {
         display: block;
         position: relative;
     }
+    .header--is-show .submenu__burger{
+        height: 20px;
+        z-index: 2000;
+    }
+
     .submenu__burger {
         width: 40px;
         height: 30px;
@@ -323,12 +346,16 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(43, 43, 43, 0.7);
+        background-image: linear-gradient(black 10%, rgba(43, 43, 43, 0.7) 90%);
         transition: all 0.3s ease 0s;
         overflow: auto;
     }
     .submenu-nav.active {
-        top: 5px;
+        top: 0;
+    }
+    .header--is-show .submenu-nav.active {
+        top: 0;
+        z-index: 1500;
     }
     .submenu-nav__link {
         display: flex;
@@ -374,7 +401,17 @@ body {
     }
     .submenu__burger.active:after {
         bottom: 11px;
-    }  
+    } 
+    .header--is-show .submenu__burger span {
+        top: 9px;
+    }
+    .header--is-show .submenu__burger.active:before {
+        top: 9px;
+    }
+    .header--is-show .submenu__burger.active:after {
+        bottom: 8px;
+    } 
+    
     .info__cards {
         align-content: center;
     }

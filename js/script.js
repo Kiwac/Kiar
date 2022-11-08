@@ -39,6 +39,8 @@ $(document).ready(function(){
     speed: 1000,
     touchThreshold: 20,
     waitForAnimate: false,
+    fade: true,
+    cssEase: 'linear',
     autoplay: true,
     autoplaySpeed: 4000,
   });
