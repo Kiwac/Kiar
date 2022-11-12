@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="style/sroll.css">
     <link rel="stylesheet" href="style/style.css">
     <title>AID | ARCHITECTURE and INTERIOR DESIGN</title>
@@ -25,11 +26,14 @@
                         <a href="#" class="nav__link">Folders</a>
                     </nav>
 
+
                     <nav class="nav-2">
                         <div class="serch">
-                            <img src="img/logo/serch.svg" alt="">   
+                            <div class="serch__image">
+                                <img src="img/logo/serch.svg" alt="">   
+                            </div>
                         </div>
-                        <a href="#" class="nav__link">Log in / Sing up</a>
+                        <span class="nav__link link-login">Log in / Sing up</span>
                         <div class="submenu">
                             <div class="submenu__burger">
                                 <span></span>
@@ -39,8 +43,8 @@
                                 <a href="#" class="submenu-nav__link">Biographies</a>
                                 <a href="#" class="submenu-nav__link">Products</a>
                                 <a href="#" class="submenu-nav__link">Folders</a>
-                                <a href="#" class="submenu-nav__link">Log in</a>
-                                <a href="#" class="submenu-nav__link">Sing up</a>
+                                <span class="submenu-nav__link link-login">Log in</span>
+                                <span class="submenu-nav__link link-login">Sing up</span>
                             </nav>   
                         </div>
                     </nav>
@@ -48,6 +52,44 @@
             </div>
         </div>
     </header>
+
+    <div class="login">
+        <div class="login__wrapper">
+            <div class="login__container">
+                <div class="login__inner">
+                    <img class="login__close" src="img/logo/close.svg" alt="">
+                    <img class="login__logo" src="img/logo/footer-logo.svg" alt="Logo">
+                    <div class="form login__form">
+                        <span class="form__title">Join AID!</span>
+                        <form  class="form__inner" action="#" autofocus>
+                            <div class="form__field">
+                                <label class="field__name" for="email">Email</label>
+                                <input class="field__input" id="email" type="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form__field">
+                                <label class="field__name" for="password">Password</label>
+                                <div class="field__item">
+                                    <input class="field__input password" id="password" type="password" placeholder="Enter your password" required>
+                                    <i class="field__icon uil uil-eye-slash showHidePw"></i>
+                                </div>
+                            </div>
+                            <input class="form__btn" type="submit"  value="LOG IN" required>
+                        </form>
+
+                        <div class="login__alternative">
+                            <div class="login__line"></div>
+                            <span>OR</span>
+                            <div class="login__line"></div>
+                        </div>
+
+                        <a href="#"><div class="login__btn">Continue with Google</div></a>
+                        <a href="#"><div class="login__btn">Continue with Facebook</div></a>
+                        <a href="#" class="login__question">Not registered yet? Join</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="background">
         <div class="bg-slider">

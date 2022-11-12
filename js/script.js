@@ -48,6 +48,11 @@ $(document).ready(function(){
     $('.submenu__burger, .submenu-nav').toggleClass('active');
     $('body').toggleClass('lock');
   });
+  $('.link-login, .login__close').click(function(event){
+    $('.link-login, .login').toggleClass('active');
+    $('body').toggleClass('block');
+    
+  });
 });
 
 var header = $('.js-header'),
@@ -70,3 +75,28 @@ $(window).scroll(function() {
     cloneHeader.removeClass('header--is-show');
   }
 });
+
+const pwShowHide = document.querySelectorAll(".showHidePw"),
+      pwFields = document.querySelectorAll(".password");
+
+      pwShowHide.forEach(eyeIcon => {
+        eyeIcon.addEventListener("click", () => {
+          pwFields.forEach(pwField => {
+            if(pwField.type ==="password"){
+              pwField.type = "text";
+
+              pwShowHide.forEach(icon => {
+                icon.classList.replace("uil-eye-slash", "uil-eye");
+              })
+            }
+            else{
+              pwField.type = "password";
+
+              pwShowHide.forEach(icon => {
+                icon.classList.replace("uil-eye", "uil-eye-slash");
+              })
+
+            }
+          })
+        })
+      });
