@@ -16,7 +16,7 @@ body {
     font-family: 'Inter';
 }
 
-body.lock {
+body.lock, body.block {
     overflow: hidden;
 }
 
@@ -80,12 +80,14 @@ body.lock {
     justify-content: space-between;
     align-items: center;
     padding: 38px 0 25px;
+    gap: 20px;
 }
 
 .nav-1 {
     display: flex;
     gap: 33px;
     margin-left: 66px;
+    transform: scale(1);
 }
 
 .nav__link {
@@ -93,10 +95,66 @@ body.lock {
     font-size: 15px;
     line-height: 138.02%;
     letter-spacing: 0.14em;
+    white-space: nowrap;
     color: #F5FFFD;
     cursor: pointer;
 }
 
+
+.nav-1.hide-nav{
+    display: none;
+}
+
+
+.search__image {
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+}
+
+
+
+.search__close {
+    width: 13px;
+    cursor: pointer;
+}
+
+.search-form {
+    display: none;
+    max-width: 650px;
+    width: 100%;
+}
+
+.header--is-show .search-form{
+    top: 20px;
+}
+
+.search-form__container {
+    max-width: 650px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-form.active {
+    display: flex;
+}
+
+
+.search-form__input {
+    width: 100%;
+    background: transparent;
+    color: #F5FFFD;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-form__input::placeholder {
+    color: #F5FFFD;
+    opacity: 0.8;
+}
 
 .nav-2 {
     display: flex;
@@ -179,7 +237,7 @@ body.lock {
     align-self: center;
     max-width: 136px;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .form__title {
@@ -191,14 +249,14 @@ body.lock {
 }
 
 .form__inner {
-    margin: 13px 0 26px;
+    margin: 10px 0 16px;
 }
 
 .form__field {
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .field__name {
@@ -212,9 +270,10 @@ body.lock {
 
 .field__input {
     width: 100%;
-    padding: 13px;
+    padding: 10px;
     border: none;
     outline: none;
+    background: #F5FFFD;
     border-bottom: 2px solid rgba(42, 90, 73, 0.3);
     transition: all 0.2s ease;
 }
@@ -257,6 +316,14 @@ body.lock {
     color: #2A5A49;
 }
 
+.uil-eye {
+    color: rgba(42, 90, 73, 0.3);
+}
+
+.field__input:is(:focus, :valid) ~ .uil-eye {
+    color: #2A5A49;
+}
+
 .form__btn {
     width: 100%;
     font-weight: 700;
@@ -280,7 +347,7 @@ body.lock {
     justify-content: space-between;
     gap: 13px;
     align-items: center;
-    margin-bottom: 26px;
+    margin-bottom: 16px;
 }
 
 .login__line {
@@ -310,7 +377,7 @@ body.lock {
     padding: 12px 20px;
     text-align: center;
     border: 3px solid #2A5A49;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .login__btn:hover {
@@ -413,6 +480,11 @@ body.lock {
     letter-spacing: 0.14em;
     color: #2A5A49;
     padding: 13px 43px 12px;
+}
+
+.btn:hover {
+    background: #2A5A49;
+    color: #F5FFFD;
 }
 
 .footer {
@@ -738,16 +810,3 @@ body.lock {
     }
 }
 
-.search {
-    width: 600px;
-}
-
-.search__container {
-    max-width: 600px;
-     margin: 0 auto;
-    padding: 0 30px;
-}
-
-.search__text {
-    width: 100%;
-}

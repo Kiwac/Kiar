@@ -53,6 +53,16 @@ $(document).ready(function(){
     $('body').toggleClass('block');
     
   });
+  $('.search__btn').click(function(){
+    $('.nav-1').addClass('hide-nav')
+    $('.search-form').addClass('active');
+    $('.image__hide-show').hide();
+  });
+  $('.search__close').click(function(){
+    $('.nav-1').removeClass('hide-nav')
+    $('.search-form').removeClass('active');
+    $('.image__hide-show').show();
+  });
 });
 
 var header = $('.js-header'),
