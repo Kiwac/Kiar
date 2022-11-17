@@ -42,7 +42,7 @@ $(document).ready(function(){
     fade: true,
     cssEase: 'linear',
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
   });
   $('.submenu__burger').click(function(event){
     $('.submenu__burger, .submenu-nav').toggleClass('active');
@@ -50,41 +50,18 @@ $(document).ready(function(){
   });
   $('.link-login, .login__close').click(function(event){
     $('.link-login, .login').toggleClass('active');
-    $('body').toggleClass('block');
-    
+    $('body').toggleClass('block');   
   });
   $('.search__btn').click(function(){
-    $('.nav-1').addClass('hide-nav')
+    $('.header__logo, .nav-1, .nav-2').addClass('hide')
     $('.search-form').addClass('active');
-    $('.image__hide-show').hide();
   });
   $('.search__close').click(function(){
-    $('.nav-1').removeClass('hide-nav')
+    $('.header__logo, .nav-1, .nav-2').removeClass('hide')
     $('.search-form').removeClass('active');
-    $('.image__hide-show').show();
   });
 });
 
-var header = $('.js-header'),
-  cloneHeader = header.clone();
-
-
-cloneHeader.addClass('header--fixed');
-header.before(cloneHeader);
-
-
-console.log(header);
-
-$(window).scroll(function() {
-  console.log($(window).scrollTop());
-
-  if($(window).scrollTop() > 725) {
-    cloneHeader.addClass('header--is-show');
-  }
-  else {
-    cloneHeader.removeClass('header--is-show');
-  }
-});
 
 const pwShowHide = document.querySelectorAll(".showHidePw"),
       pwFields = document.querySelectorAll(".password");
@@ -110,3 +87,32 @@ const pwShowHide = document.querySelectorAll(".showHidePw"),
           })
         })
       });
+
+const header = document.querySelector('.js-header');
+const start =document.querySelector('.js-start');
+const headerHeight = header.offsetHeight;
+const startdHeight = start.offsetHeight;
+let lastScrollTop=0;
+
+window.addEventListener('scroll', () => {
+  let scrollDistance = window.scrollY;
+
+  if(scrollDistance > lastScrollTop) {
+    header.classList.add('header--fixed__hide');
+    header.classList.remove('header--fixed__show');
+    start.style.marginTop= null;
+  }
+  else {
+    header.classList.add('header--fixed__show');
+    header.classList.remove('header--fixed__hide');
+    start.style.marginTop= '$(headerHeight)px';
+  }
+
+  if(scrollDistance === 0) {
+    header.classList.remove('header--fixed__show');
+    start.style.marginTop= null;
+  }
+
+  lastScrollTop = scrollDistance;
+
+});
