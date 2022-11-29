@@ -9,9 +9,51 @@ body {
   font-family: 'Inter';
 }
 
+.background {
+  position: relative;
+  background: black;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg-slider, .bg-slider__item {
+  height: 100vh;
+}
+
+.bg-slider__item {
+  position: relative;
+}
+
+.bg-slider__item .bg-slider__image  {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.bg-slider__image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.bg-slider__title {
+  position: absolute;
+  bottom: 15%;
+  right: 12%;
+  left: 12%;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 67px;
+  letter-spacing: 0.15em;
+  color: #F5FFFD;
+}
+
 .biog-slider {
-  margin: 196px 0;
-  padding: 34px 70px 51px;
+  padding: 130px 70px 51px;
 }
 
 .biog-slider__title {
@@ -24,7 +66,6 @@ body {
   letter-spacing: 0.14em;   
   color: #434343;
 }
-
 
 .biog-slider__content{
   margin-right: 0;
@@ -57,11 +98,9 @@ body {
 }
 
 .products-slider {
-  margin: 196px 0;
   padding: 57px 70px 60px;
   background-color: #2A5A49;
 }
-
 
 .products-slider__title {
   font-family: 'Inter';
@@ -147,49 +186,9 @@ body {
 }
 
 
-
-.background {
-  z-index: 2;
-  background: black;
-}
-
-.bg-slider, .bg-slider__item {
-  height: 100vh;
-}
-
-.bg-slider__item {
-  position: relative;
-}
-
-.bg-slider__item .bg-slider__image  {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-.bg-slider__image img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  opacity: 0.3;
-}
-
-.bg-slider__title {
-  position: absolute;
-  bottom: 15%;
-  right: 12%;
-  left: 12%;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 67px;
-  letter-spacing: 0.15em;
-  color: #F5FFFD;
-}
-
-
 @media screen and (max-width:1160px) {
   .biog-slider, .products-slider {
-  padding: 34px 30px 51px;
+  padding-right: 30px;
   }
   .slider {
     padding: 0 40px;
@@ -198,7 +197,7 @@ body {
 
 @media screen and (max-width:855px) {
   .biog-slider, .products-slider {
-  padding: 34px 40px 51px;
+  padding-right: 40px;
   }
   .slider {
     padding: 0 40px;
@@ -213,7 +212,7 @@ body {
 
 @media screen and (max-width:550px) {
   .biog-slider, .products-slider {
-  padding: 34px 50px 51px;
+  padding-right: 50px;
   }
   .bg-slider__title {
     font-size: 28px;
@@ -223,7 +222,7 @@ body {
 
 @media screen and (max-width:400px) {
   .biog-slider, .products-slider {
-  padding: 34px 10px 51px;
+  padding-right: 10px;
   }
   .bg-slider__title {
     left: 8%;

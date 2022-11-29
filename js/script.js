@@ -33,6 +33,7 @@ $(document).ready(function(){
       }
     ]
   });
+  
   $('.bg-slider').slick({
     arrows: false,
     slidesToShow: 1,
@@ -44,14 +45,17 @@ $(document).ready(function(){
     autoplay: true,
     autoplaySpeed: 3000,
   });
+
   $('.submenu__burger').click(function(event){
     $('.submenu__burger, .submenu-nav').toggleClass('active');
     $('body').toggleClass('lock');
   });
+
   $('.link-login, .login__close').click(function(event){
     $('.link-login, .login').toggleClass('active');
     $('body').toggleClass('block');   
   });
+
   $('.search__btn').click(function(){
     $('.header__logo, .nav-1, .nav-2').addClass('hide')
     $('.search-form').addClass('active');
