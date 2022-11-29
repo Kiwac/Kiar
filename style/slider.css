@@ -188,7 +188,8 @@ body {
 
 @media screen and (max-width:1160px) {
   .biog-slider, .products-slider {
-  padding-right: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
   .slider {
     padding: 0 40px;
@@ -197,7 +198,8 @@ body {
 
 @media screen and (max-width:855px) {
   .biog-slider, .products-slider {
-  padding-right: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
   .slider {
     padding: 0 40px;
@@ -212,7 +214,8 @@ body {
 
 @media screen and (max-width:550px) {
   .biog-slider, .products-slider {
-  padding-right: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
   .bg-slider__title {
     font-size: 28px;
@@ -222,7 +225,8 @@ body {
 
 @media screen and (max-width:400px) {
   .biog-slider, .products-slider {
-  padding-right: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .bg-slider__title {
     left: 8%;
