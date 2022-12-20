@@ -34,7 +34,8 @@ $(document).ready(function(){
     ]
   });
   
-  $('.bg-slider').slick({
+
+  $('.background-slider').slick({
     arrows: false,
     slidesToShow: 1,
     speed: 1000,
@@ -46,6 +47,7 @@ $(document).ready(function(){
     autoplaySpeed: 3000,
   });
 
+
   $('.submenu__burger').click(function(event){
     $('.submenu__burger, .submenu-nav').toggleClass('active');
     $('body').toggleClass('lock');
@@ -53,15 +55,15 @@ $(document).ready(function(){
 
   $('.link-login, .login__close').click(function(event){
     $('.link-login, .login').toggleClass('active');
-    $('body').toggleClass('block');   
+    $('body').toggleClass('lock');   
   });
 
   $('.search__btn').click(function(){
-    $('.header__logo, .nav-1, .nav-2').addClass('hide')
+    $('.header__logo, .link, .search__btn,.link-login, .nav__link').addClass('hide')
     $('.search-form').addClass('active');
   });
   $('.search__close').click(function(){
-    $('.header__logo, .nav-1, .nav-2').removeClass('hide')
+    $('.header__logo, .link, .search__btn,.link-login').removeClass('hide')
     $('.search-form').removeClass('active');
   });
 });
@@ -120,3 +122,64 @@ window.addEventListener('scroll', () => {
   lastScrollTop = scrollDistance;
 
 });
+
+
+
+const galleryItem = document.getElementsByClassName("gallery__item");
+const lightBoxContainer = document.createElement("div");
+const lightBoxContent = document.createElement("div");
+const lightBoxImg = document.createElement("img");
+const lightBoxPrev = document.createElement("div");
+const lightBoxNext = document.createElement("div");
+
+lightBoxContainer.classList.add("lightbox");
+lightBoxContent.classList.add("lightbox-content");
+lightBoxPrev.classList.add("lightbox-prev");
+lightBoxNext.classList.add("lightbox-next");
+
+lightBoxContainer.appendChild(lightBoxContent);
+lightBoxContent.appendChild(lightBoxImg);
+lightBoxContent.appendChild(lightBoxPrev);
+lightBoxContent.appendChild(lightBoxNext);
+document.body.appendChild(lightBoxContainer);
+
+let index = 1;
+
+function showLightBox(n) {
+    if (n > galleryItem.length) {
+        index = 1;
+    } else if (n < 1) {
+        index = galleryItem.length;
+    }
+    let imageLocation = galleryItem[index-1].children[0].getAttribute("src");
+    lightBoxImg.setAttribute("src", imageLocation);
+}
+
+function currentImage() {
+    lightBoxContainer.style.display = "block";
+
+    let imageIndex = parseInt(this.getAttribute("data-index"));
+    showLightBox(index = imageIndex);
+}
+for (let i = 0; i < galleryItem.length; i++) {
+    galleryItem[i].addEventListener("click", currentImage);
+}
+
+function slideImage(n) {
+    showLightBox(index += n);
+}
+function prevImage() {
+    slideImage(-1);
+}
+function nextImage() {
+    slideImage(1);
+}
+lightBoxPrev.addEventListener("click", prevImage);
+lightBoxNext.addEventListener("click", nextImage);
+
+function closeLightBox() {
+    if (this === event.target) {
+        lightBoxContainer.style.display = "none";
+    }
+}
+lightBoxContainer.addEventListener("click", closeLightBox);
