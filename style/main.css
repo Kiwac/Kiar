@@ -214,6 +214,12 @@ body.lock {
     display: none;
 }
 
+.submenu__burger.hide {
+    transition: 0.5s;
+    transform: scale(0);
+    transition-delay: 0.1s;
+}
+
 .login {
     display: none;
 }
@@ -525,6 +531,8 @@ body.lock {
         height: 30px;
         position: relative;
         z-index: 15;
+        transition: 1s;
+        transform: scale(1);
     }
     .submenu__burger span {
         background: #F5FFFD;

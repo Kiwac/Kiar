@@ -59,11 +59,11 @@ $(document).ready(function(){
   });
 
   $('.search__btn').click(function(){
-    $('.header__logo, .link, .search__btn,.link-login, .nav__link').addClass('hide')
+    $('.header__logo, .link, .search__btn,.link-login, .nav__link, .submenu__burger').addClass('hide')
     $('.search-form').addClass('active');
   });
   $('.search__close').click(function(){
-    $('.header__logo, .link, .search__btn,.link-login').removeClass('hide')
+    $('.header__logo, .link, .search__btn,.link-login, .submenu__burger').removeClass('hide')
     $('.search-form').removeClass('active');
   });
 });
