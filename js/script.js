@@ -55,7 +55,7 @@ $(document).ready(function(){
 
   $('.link-login, .login__close').click(function(event){
     $('.link-login, .login').toggleClass('active');
-    $('body').toggleClass('lock');   
+    $('body').toggleClass('block');
   });
 
   $('.search__btn').click(function(){
