@@ -1,0 +1,43 @@
+.error {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Inter';
+}
+
+.error__title {
+    font-size: 12.5rem;
+    font-weight: 900;
+    letter-spacing: .10em;
+    color: #2A5A49;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error__subtitle {
+    font-weight: 700;
+    color: #434343; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error__text {
+    padding: 5px;
+    color: #434343; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error__btn {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:540px)  {
+    .error__title {
+        font-size: 8rem;
+    }
+}
